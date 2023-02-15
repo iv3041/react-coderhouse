@@ -19,7 +19,7 @@ export const NavBar = () => {
                 </ul>
                 <div className='divCart'>
                 <a className='cartW' href='/'><CartWidget /></a>
-                <a className='cartW' href='/'><span>1</span></a>
+                <a className='cartW' href='/'><span>3</span></a>
                 </div>
             </nav>
         </div>
