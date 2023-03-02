@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    background: linear-gradient(to right, #5058eb, #a6ffa3);
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    border-bottom: 2px solid #57007E;
+}
+
+/* containerLogo */
+header .containerLogo{
+    width: 20%;
+    min-width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    margin-left: 1rem;
+    width: 90px;
+    filter: drop-shadow(0 4px 5px white);
+}
+
+header .containerLogo img{
+    transform: scale(0.70);
+}
+
+/* containerList */
+header .containerItemList{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+}
+
+header .containerItemList ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    justify-content: flex-end;   
+}
+
+header .containerItemList ul li{
+    margin: 0 0 0 50px;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+
+header .containerItemList ul li:hover{
+    border-bottom: 1px solid white;
+}
+
+/* containerCart */
+
+header .containerCart{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 72px;
+}
+
+header .containerCart .containerLength{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+
+header .containerCart .containerLength .cantCart{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #FC7300;
+    color: white;
+    text-align: center;
+    top: 0;
+    left: 80%;
+    border-radius: 50%;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    color: #1D1CE5;
+    text-shadow: -5px -5px 5px #76bd74;
+    padding-top: 7rem;
+    font-weight: bolder;
+    font-size: 80px;
+}
