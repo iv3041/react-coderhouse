@@ -1,10 +1,24 @@
-import React from 'react';
-import './styles/style.css';
+import { useContext } from "react";
+import cart from "../img/cart.svg"
+import { listCartContext } from "./items/providerContextoListCart";
+import { controllerShowCart } from "./ContextCart";
 
-export const CartWidget = () => {
-  return (
-    <i className="bi bi-cart2"></i>
+const CartWidget = () => {
+  const { setCartShow, cartShow } = useContext(controllerShowCart)
+  const { listCart } = useContext(listCartContext)
+
+  const showCart = () => {
+      setCartShow( (cartShow === "none") ? "flex" : "none" )
+  }
+
+  return(
+      <div className="containerLength" onClick={showCart}>
+          <img src={cart} alt="cart"></img>
+          <span className="cantCart">
+              {listCart.length}
+          </span>
+      </div>
   )
 }
 
-export default CartWidget
+export default CartWidget;

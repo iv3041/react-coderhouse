@@ -1,28 +1,37 @@
-import React from 'react';
-import './styles/style.css';
-import CartWidget from './CartWidget';
+import Logo from "./Logo";
+import ItemListContainer from "./ItemsListContainer";
+import CartWidget from "./CartWidget";
+import ContainerCart from "./ContainerCart";
+import ContextCart from "./ContextCart";
 
+const NavBar = () => {
 
-export const NavBar = () => {
     return (
-        <div className='nav_container'>
-            <nav className='navBar'>
-                <div className='logo'>
-                    <a href='/'> <img src="logo.png" alt="Logo JIMP" /> </a>
+        <ContextCart>
+            <header>
+                <div className="containerLogo">
+                    <Logo />
                 </div>
-                <ul className='nav_list'>
-                    <li><a className='nav_link' href='/'>Inicio</a></li>
-                    <li><a className='nav_link' href='/'>Apple</a></li>
-                    <li><a className='nav_link' href='/'>Android</a></li>
-                    <li><a className='nav_link' href='/'>Proyectos</a></li>
-                    <li><a className='nav_link' href='/'>Contacto</a></li>
-                </ul>
-                <div className='divCart'>
-                <a className='cartW' href='/'><CartWidget /></a>
-                <a className='cartW' href='/'><span>3</span></a>
+
+
+                <nav className="containerItemList">
+                    <ItemListContainer 
+                        itemUno = "iPhone"
+                        itemDos = "Mac"
+                        itemTres = "Watch"
+                        itemCuatro = "Accesorios"
+                    />
+                </nav>
+
+                <div className="containerCart">
+                    <CartWidget />
                 </div>
-            </nav>
-        </div>
+                <ContainerCart />
+            </header>
+            <h1>
+                    El mundo de la Manzana Mordida
+                </h1>
+        </ContextCart>
     )
 }
 
